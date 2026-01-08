@@ -1,4 +1,4 @@
-import myWork from "."
+import {myWork} from "./index.js"
 import CountUp from 'react-countup';
 
 
@@ -11,7 +11,7 @@ const AnimatedCounter = () => {
                         return (
                             <div key={items.id} className="myWork">
                                 <div  className="font-bold text-3xl">
-                                    <CountUp end={items.id} duration={10} /> {items.suffix}   
+                                    <CountUp end={items.id} duration={30} /> {items.suffix}   
                                 </div>
                                 <div className="tex text-sm">
                                     {items.label}

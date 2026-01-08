@@ -1,21 +1,31 @@
-
+import GooeyNav from '../src/components/GooeyNav.jsx'
 
 const Navebar = () => {
+
+  const items = [
+    { label: "work", href: "work" },
+    { label: "Skills", href: "skills" },
+    { label: "Testimonials", href: "test" },
+  ];
+
   return (
-    <div className="flex flex-row justify-between items-center mx-5 text-white absolute left-0 right-0 top-0 z-50">
-      <div className=" my-5 font-bold text-2xl">
+   
+    <div className="flex flex-col md:flex-row justify-between items-center w-full px-5 py-4 text-white">
+       <div className="  font-bold lg:text-2xl md:text-xl sm:text-l justify-start">
         RonneyDev
       </div>
-      <div >
-        <ul className="flex flex-row gap-3 mt-2 font-medium">
-            <button>Work</button>
-            <button>Experience</button>
-            <button>Skills</button>
-            <button>Testimonials</button>
-        </ul>
-      </div>
-      <div>
-        <button className="bg-white text-black rounded px-2 py-1 font-medium">Contact me</button>
+      <div className='felx flex-col' >
+      <GooeyNav
+        
+        items={items}
+        particleCount={15}
+        particleDistances={[90, 10]}
+        particleR={0}
+        initialActiveIndex={10}
+        animationTime={600}
+        timeVariance={300}
+        colors={[1,2,3,1,2,3,1,4]}
+      />
       </div>
     </div>
   )
